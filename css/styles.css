@@ -1,0 +1,88 @@
+/* general */
+body,
+html {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-family: "Montserrat", sans-serif;
+}
+/* header and title */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.main-title {
+  font-size: 160px;
+  color: var(--color-black); 
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40%;
+  height: 30%;
+  margin: auto;
+}
+
+/* nav button */
+
+.checkbox {
+	display: none;
+}
+
+.checkbox:checked + div .header-container label .header-button {
+	background: none;
+}
+
+.checkbox:checked + div .header-container label .header-button::after,
+.checkbox:checked + div .header-container label .header-button::before {
+	top: 0;
+}
+
+.checkbox:checked + div .header-container label .header-button::before {
+	transform: rotate(35deg);
+}
+
+.checkbox:checked + div .header-container label .header-button::after {
+	transform: rotate(-35deg);
+}
+
+.btn-label {
+	cursor: pointer !important;
+	width: 2rem;
+	height: 1.4rem;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  
+}
+
+.header-button {
+	width: 2rem;
+	height: 0.2rem;
+	background: #ffa800;
+	position: absolute;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.header-button::before,
+.header-button::after {
+	content: "";
+	width: 2rem;
+	height: 0.2rem;
+	background: #ffa800;
+	position: absolute;
+	top: -0.6rem;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.header-button::after {
+	top: 0.6rem;
+	cursor: pointer;
+}
+
