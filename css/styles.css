@@ -5,6 +5,15 @@ html {
 	padding: 0 !important;
 	font-family: "Montserrat", sans-serif;
 }
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
 /* header and title */
 .logo {
   position: absolute;
@@ -27,26 +36,81 @@ html {
   margin: auto;
 }
 
+
+/* Nav menu  */
+
+.languages {
+  color: var(--color-yellow);
+  position: absolute;
+	top: 25px;
+	left: 18px;
+  text-transform: uppercase ;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 17px;
+	letter-spacing: 0.04rem;
+}
+
+ul {
+	text-align: center;
+	letter-spacing: 0.04em;
+  padding-top: 150px;
+}
+
+li {
+	cursor: pointer;
+	color: transparent;
+	list-style: none;
+	font-style: normal;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	text-shadow: 0 0 2px var(--color-yellow);
+	color: var(--color-black);
+	opacity: 0.6;
+	transition: 1s;
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+li:hover {
+	color: var(--color-yellow) !important;
+	opacity: 1;
+}
+
+.nav-undertext {
+  font-size: 18px;
+}
+
+.img-desktop {
+  max-height: 665px;
+}
+
+.icon-container {
+  background-color: var(--color-black);
+  height: 296px;
+}
+
 /* nav button */
 
 .checkbox {
 	display: none;
 }
 
-.checkbox:checked + div .header-container label .header-button {
+.checkbox:checked + .header-container label .header-button {
 	background: none;
 }
 
-.checkbox:checked + div .header-container label .header-button::after,
-.checkbox:checked + div .header-container label .header-button::before {
+.checkbox:checked + .header-container label .header-button::after,
+.checkbox:checked + .header-container label .header-button::before {
 	top: 0;
 }
 
-.checkbox:checked + div .header-container label .header-button::before {
+.checkbox:checked + .header-container label .header-button::before {
 	transform: rotate(35deg);
 }
 
-.checkbox:checked + div .header-container label .header-button::after {
+.checkbox:checked + .header-container label .header-button::after {
 	transform: rotate(-35deg);
 }
 
@@ -63,7 +127,7 @@ html {
 .header-button {
 	width: 2rem;
 	height: 0.2rem;
-	background: #ffa800;
+	background: var(--color-yellow);
 	position: absolute;
 	transition: all 0.2s;
 	cursor: pointer;
@@ -74,7 +138,7 @@ html {
 	content: "";
 	width: 2rem;
 	height: 0.2rem;
-	background: #ffa800;
+	background: var(--color-yellow);
 	position: absolute;
 	top: -0.6rem;
 	transition: all 0.2s;
